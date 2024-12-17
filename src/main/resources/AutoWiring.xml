@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+   <!--<bean id="pers" class="com.swathy.ex4.Person" >
+       <property name="heart" ref="heart"/>
+   </bean>
+    <bean id ="heart" class="com.swathy.ex4.Heart"/> -->
+    <!-- without using autowiring -->
+
+
+
+    <bean id = "heart1" class="com.swathy.ex4.Heart" primary="true"/>
+    <bean id = "heart2" class="com.swathy.ex4.Heart"/>
+    <bean id="pers" class="com.swathy.ex4.Person" autowire="byType"/>
+
+    <!-- Spring identifies that Person has a dependency on Heart.
+It checks all beans of type Heart (heart1 and heart2).
+Since heart1 is marked as primary="true", it is chosen as the default bean for injection.
+
+heart1 is injected into the Person object.
+The Person object uses heart1 when calling StartPump(). -->
+
+</beans>
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="humu" class="com.swathy.ex3.Human">
+    <!--    <constructor-arg type="int" value="21"/>
+        <constructor-arg type="com.swathy.ex3.Phone" ref="phomo"/>   -->
+
+       <constructor-arg index="0" value="21"/>
+        <constructor-arg index="1" ref="phomo"/>
+
+        
+
+
+    </bean>
+    <bean id="phomo" class="com.swathy.ex3.Phone">
+
+    </bean>
+</beans>

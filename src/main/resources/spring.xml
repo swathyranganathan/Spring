@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id ="alien" class="com.swathy.ex1.Alien">
+        <property name="age" value="56"> </property>
+        <property name="lap" ref="lap1"> </property>
+
+    </bean>
+
+    <bean id="lap1" class="com.swathy.ex1.Laptop">
+
+    </bean>
+
+</beans>
+
+<!-- <beans>: The root tag where all the beans are defined.
+<bean>: Defines a Spring-managed bean (an object).
+    id="alien": The name of the bean, which is used to retrieve it in the code.
+    class="com.swathy.ex1.Alien": The fully qualified class name of the object Spring should create.
+-->
